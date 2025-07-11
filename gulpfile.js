@@ -14,13 +14,13 @@ gulp.task('delete', function () {
 gulp.task('resize-images', function () {
     return gulp.src('images/*.*')
         .pipe(imageResize({
-            width: 1024,
-            imageMagick: true
+            width: 2048,
+            imageMagick: false
         }))
         .pipe(gulp.dest('images/fulls'))
         .pipe(imageResize({
-            width: 512,
-            imageMagick: true
+            width: 1024,
+            imageMagick: false
         }))
         .pipe(gulp.dest('images/thumbs'));
 });
